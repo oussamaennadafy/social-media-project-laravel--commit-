@@ -1,6 +1,6 @@
 @props(['post' => $post])
 
-<div class="mb-4">
+<div>
   <a href="{{route('users.posts', $post->user)}}" class=" font-medium">{{ $post->user->name }} </a> <span class="text-sm font-light text-gray-500">{{ $post->created_at->diffForHumans() }}</span>
   <p class="mb-2">{{$post->body}}</p>
 
