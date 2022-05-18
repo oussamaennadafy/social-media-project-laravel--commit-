@@ -30,7 +30,6 @@
 
 
 
-
     @endauth
     <span>{{$post->likes->count()}} {{ Str::plural('like', $post->likes->count()) }}</span>
   </div>

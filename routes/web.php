@@ -28,7 +28,6 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/all-posts', [PostController::class, 'index']);
 Route::post('/posts', [PostController::class, 'store'])->name('posts.form'); 
 Route::post('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy'); 
