@@ -18,7 +18,7 @@
        @foreach ($posts as $index => $post)
        
        @if($index > 0)
-       <hr class="mb-3">
+       <hr class="my-3">
        @endif
        <x-post :post='$post' />
        @endforeach
