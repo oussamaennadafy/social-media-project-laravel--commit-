@@ -19,7 +19,7 @@
          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium">post</button>
      </div>
      </form>
-  <div class="w-full bg-white p-6 rounded-lg">
+  <div class="w-full bg-white p-6 rounded-lg mb-14">
       @if ($posts->count())
       @foreach ($posts as $post)
       <div class="border border-gray-200 rounded mb-4 px-6 py-4">
