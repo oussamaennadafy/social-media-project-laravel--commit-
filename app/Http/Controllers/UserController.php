@@ -46,17 +46,29 @@ class UserController extends Controller
      */
     public function getUser($id)
     {
+        if (auth()->user()) {
+            $users = User::find($id);
 
-        $users = User::find($id);
-
-        return view('users.profile', [
-            'users' => $users
-        ]);
+            return view('users.profile', [
+                'users' => $users
+            ]);
+        } else {
+            return redirect(route('login'));
+        }
     }
-    public function updateUser($id)
+    public function updateUser(Request $request)
     {
 
-        // dd('user updated ' . $id);
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'username' => 'required|max:255',
+            'email' => 'required|max:255',
+            'password' => 'required|confirmed',
+        ]);
+
+        User::where('id', $request->id)->update(array('name' => $request->name, 'username' => $request->username, 'email' => $request->email, 'password' => $request->password));
+
+        return redirect(route('Profile'));
     }
     public function show(User $user)
     {

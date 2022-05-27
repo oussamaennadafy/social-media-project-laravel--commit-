@@ -483,6 +483,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-1 {
   margin-top: 0.25rem;
 }
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-20 {
+  margin-bottom: 5rem;
+}
 .block {
   display: block;
 }
@@ -503,6 +509,33 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-1\/4 {
   width: 25%;
+}
+.w-1\/2 {
+  width: 50%;
+}
+.w-5\/12 {
+  width: 41.666667%;
+}
+.w-52 {
+  width: 13rem;
+}
+.w-64 {
+  width: 16rem;
+}
+.w-80 {
+  width: 20rem;
+}
+.w-96 {
+  width: 24rem;
+}
+.w-14 {
+  width: 3.5rem;
+}
+.w-40 {
+  width: 10rem;
+}
+.w-60 {
+  width: 15rem;
 }
 .cursor-default {
   cursor: default;
@@ -527,6 +560,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-2 {
   gap: 0.5rem;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 .rounded-lg {
   border-radius: 0.5rem;
@@ -580,6 +616,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
 .p-6 {
   padding: 1.5rem;
 }
@@ -609,6 +649,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
 .text-center {
   text-align: center;
 }
@@ -620,11 +672,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .font-medium {
   font-weight: 500;
 }
 .font-light {
   font-weight: 300;
+}
+.font-semibold {
+  font-weight: 600;
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -647,6 +710,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }

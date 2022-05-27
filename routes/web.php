@@ -24,8 +24,8 @@ Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 
-Route::get('users/profile/{id}', [UserController::class, 'getUser'])->name('profile');
-Route::post('users/profile/edit/{id}', [UserController::class, 'updateUser'])->name('profile');
+Route::get('users/profile/{id}', [UserController::class, 'getUser'])->name('Profile');
+Route::post('users/profile/edit/{id}', [UserController::class, 'updateUser'])->name('Profile.edit');
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
