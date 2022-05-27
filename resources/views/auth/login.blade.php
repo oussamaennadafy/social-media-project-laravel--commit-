@@ -48,6 +48,9 @@
      </button>
     </div>
    </form>
+   <form action="{{ route('admin') }}">
+      <input class="bg-blue-500 mt-2 px-4 rounded text-white cursor-pointer py-2" type="submit" value="login as admin">
+   </form>
   </div>
  </div>
 @endsection

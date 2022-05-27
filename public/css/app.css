@@ -451,6 +451,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
+.my-9 {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -692,6 +696,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .font-medium {
   font-weight: 500;

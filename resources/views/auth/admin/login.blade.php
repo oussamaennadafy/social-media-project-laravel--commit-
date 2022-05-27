@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="text-2xl font-semibold my-9 mx-auto text-center">Login As Admin</h1>
  <div class="flex justify-center">
   <div class="w-4/12 bg-white p-6 rounded-lg">
    @if (session('status'))
@@ -40,7 +41,6 @@
      </button>
     </div>
    </form>
-   <a href="{{ route('') }}"></a>
   </div>
  </div>
 @endsection
