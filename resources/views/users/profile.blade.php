@@ -3,7 +3,7 @@
 @section('content')
     <div class="flex justify-center mb-20">
      <div class="w-8/12 bg-white p-6 rounded-lg">
-       <h1 class="text-xl text-center font-semibold my-3">View Or Edit Profile</h1>
+       <h1 class="text-xl text-center font-semibold mb-5">View Or Edit Profile</h1>
        <form action="{{ route('Profile.edit', $users->id) }}" method="POST" class=" bg-white flex flex-col gap-2 rounded-lg">
         @csrf
         <div class="w-96 flex items-center justify-between mx-auto">

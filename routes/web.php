@@ -28,7 +28,6 @@ Route::get('users/profile/{id}', [UserController::class, 'getUser'])->name('Prof
 Route::post('users/profile/edit/{id}', [UserController::class, 'updateUser'])->name('Profile.edit');
 Route::get('users/profile/delete/{id}', [UserController::class, 'deleteUser'])->name('Profile.delete');
 
-
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
