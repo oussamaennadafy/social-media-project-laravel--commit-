@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -56,28 +57,39 @@ class UserController extends Controller
             return redirect(route('login'));
         }
     }
-    public function updateUser(Request $request, $id)
+    public function updateUser(Request $request)
     {
 
         $this->validate($request, [
             'name' => 'required|max:255',
             'username' => 'required|max:255',
             'email' => 'required|max:255',
-            'password' => 'required|confirmed',
         ]);
 
-        dd($id);
 
-        $user = User::find($id);
+        $user = User::find($request->id);
 
         $user->name = $request->name;
         $user->email = $request->email;
         $user->username = $request->username;
-        $user->password = bcrypt($request->password);
+
+
+        if ($request->password == null) {
+            $user->password = $request->old_password;
+        } else {
+            $user->password =  Hash::make($request->password);
+        }
 
         $user->save();
 
-        return back();
+        return redirect(route('home'));
+    }
+    public function deleteUser($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect(route('home'));
     }
     public function show(User $user)
     {
